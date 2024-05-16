@@ -1,23 +1,17 @@
 {
   "name": "idbsuit",
-  "description": "Sample NPM Package",
-  "version": "0.0.1",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "build": "tsup index.ts --format cjs,esm --dts",
-    "release": "pnpm run build && changeset publish",
-    "lint": "tsc"
-  },
+  "description": "IndexedDB Suit for handling migrations and data models",
+  "version": "0.0.2",
+  "main": "src/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/rahuldhole/idbsuit.git"
   },
   "keywords": [
-    "NPM",
-    "Sample",
-    "Package"
+    "indexeddb",
+    "database",
+    "offline first",
+    "PWA"
   ],
   "author": "Rahul Dhole <https://github.com/rahuldhole>",
   "license": "Apache-2.0",
@@ -27,7 +21,6 @@
   "homepage": "https://github.com/rahuldhole/idbsuit#readme",
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
-    "tsup": "^8.0.2",
-    "typescript": "^5.4.5"
+    "jsdoc": "^4.0.3"
   }
 }

@@ -34,7 +34,7 @@ export default class MigrationManager {
       .filter(([_, version]) => version <= migrationVersion)
       .sort((a, b) => a[1] - b[1]); // Sorting by version in ascending order
 
-    for (const [migrationClassName, version] of migrationsToRun) {
+    for (const [migrationClassName, ] of migrationsToRun) {
       const matchingMigration = this.migrations.find(
         migration => migration['default'].name === migrationClassName
       );

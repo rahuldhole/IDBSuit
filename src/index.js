@@ -1,5 +1,6 @@
 import DBUtils from './utils/DBUtils';
 import MigrationManager from './bin/MigrationManager';
+import Migration from './Migration';
 class IDBS {
   constructor(schema, migrations) {
     this.schema = schema;
@@ -96,4 +97,4 @@ class IDBS {
   }
 }
 
-export default IDBS;
+export { IDBS, Migration }; 

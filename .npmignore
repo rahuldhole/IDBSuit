@@ -1,0 +1,44 @@
+# Exclude development files
+.git
+.github/
+.gitignore
+
+.changeset/
+
+docs/
+tests/
+
+Dockerfile
+
+
+#### Copied .gitignore
+# Logs
+logs
+*.log
+npm-debug.log*
+.pnpm-debug.log*
+
+# Compiled binary addons (https://nodejs.org/api/addons.html)
+build/Release
+
+# Dependency directories
+node_modules/
+
+# generate output
+dist
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# vuepress v2.x temp and cache directory
+.temp
+.cache
+
+# Docusaurus cache and generated files
+.docusaurus
