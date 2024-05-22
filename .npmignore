@@ -7,6 +7,7 @@
 
 docs/
 tests/
+examples/
 
 Dockerfile
 
@@ -17,6 +18,7 @@ logs
 *.log
 npm-debug.log*
 .pnpm-debug.log*
+.pnpm-store
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
@@ -24,8 +26,8 @@ build/Release
 # Dependency directories
 node_modules/
 
-# generate output
-dist
+# Typescript
+tsconfig.json
 
 # TypeScript cache
 *.tsbuildinfo

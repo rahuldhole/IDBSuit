@@ -3,6 +3,7 @@ logs
 *.log
 npm-debug.log*
 .pnpm-debug.log*
+.pnpm-store
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
