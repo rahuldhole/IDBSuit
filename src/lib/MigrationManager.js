@@ -1,4 +1,4 @@
-import { default as MigrationClass } from '../Migration.js';
+import { default as MigrationClass } from '../Migration';
 
 export default class MigrationManager {
   constructor(migrations) {
