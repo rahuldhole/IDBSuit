@@ -2,7 +2,14 @@
   "name": "idbsuit",
   "description": "IndexedDB Suit for handling migrations and data models",
   "version": "0.0.2",
-  "main": "src/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "release": "pnpm run build && changeset publish",
+    "lint": "tsc"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/rahuldhole/idbsuit.git"
@@ -21,6 +28,8 @@
   "homepage": "https://github.com/rahuldhole/idbsuit#readme",
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
+    "typescript": "^5.4.5",
+    "tsup": "^8.0.2",
     "jsdoc": "^4.0.3"
   }
 }
