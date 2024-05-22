@@ -1,5 +1,8 @@
 ## Setup & Installations
 
+References:
+Github repo: https://github.com/mattpocock/pkg-demo/
+Youtube: https://www.youtube.com/watch?v=eh89VE3Mk5g
 
 1. `npm install -g pnpm`
     Update all pkgs to latest versions and run `pnpm install`

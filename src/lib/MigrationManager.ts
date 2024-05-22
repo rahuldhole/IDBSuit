@@ -1,46 +1,44 @@
-import { default as MigrationClass } from '../Migration';
+import MigrationClass from '../Migration';
 
 export default class MigrationManager {
-  constructor(migrations) {
+  private migrations: any[];
+
+  constructor(migrations: any[]) {
     this.migrations = migrations;
   }
 
-  // Check if a migration version exists
-  isVersionExist(version) {
-    return MigrationClass.derivedClasses.some(([_, v]) => v === version);
+  isVersionExist(version: number): boolean {
+    return MigrationClass.derivedClasses.some(([_, v]: [string, number]) => v === version);
   }
 
-  // Get the next migration version
-  nextVersion(currentVersion) {
+  nextVersion(currentVersion: number): number | null {
     const nextMigration = MigrationClass.derivedClasses
-      .filter(([_, v]) => v > currentVersion)
+      .filter(([_, v]: [string, number]) => v > currentVersion)
       .sort((a, b) => a[1] - b[1])[0];
     return nextMigration ? nextMigration[1] : null;
   }
 
-  // Get the previous migration version
-  prevVersion(currentVersion) {
+  prevVersion(currentVersion: number): number | null {
     const prevMigration = MigrationClass.derivedClasses
-      .filter(([_, v]) => v < currentVersion)
+      .filter(([_, v]: [string, number]) => v < currentVersion)
       .sort((a, b) => b[1] - a[1])[0];
     return prevMigration ? prevMigration[1] : null;
   }
 
-  // Execute migrations up to a specified version
-  async run(dbInstance) {
+  async run(dbInstance: IDBDatabase): Promise<void> {
     const migrationVersion = dbInstance.version;
 
     const migrationsToRun = MigrationClass.derivedClasses
-      .filter(([_, version]) => version <= migrationVersion)
+      .filter(([_, version]: [string, number]) => version <= migrationVersion)
       .sort((a, b) => a[1] - b[1]); // Sorting by version in ascending order
 
     for (const [migrationClassName, ] of migrationsToRun) {
       const matchingMigration = this.migrations.find(
-        migration => migration['default'].name === migrationClassName
+        migration => migration.default.name === migrationClassName
       );
 
       if (matchingMigration) {
-        const migrationInstance = new matchingMigration['default'](dbInstance);
+        const migrationInstance = new matchingMigration.default(dbInstance);
         await migrationInstance.migrate();
       }
     }

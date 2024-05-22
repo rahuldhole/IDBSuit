@@ -2,6 +2,6 @@
 
 // ! FOR TESTING: Update targetted package
 
-import { IDBS, Migration } from '../../../src/index';
+import { IDBS, Migration } from '../../../dist/';
 
 export { IDBS, Migration };
