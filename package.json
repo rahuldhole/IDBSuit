@@ -7,8 +7,10 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
-    "release": "pnpm run build && changeset publish",
-    "lint": "tsc"
+    "docs": "typedoc",
+    "docs-serve": "http-server ./docs.idbsuit.org -p 3000 -a 0.0.0.0",
+    "lint": "tsc",
+    "release": "pnpm run build && changeset publish"
   },
   "repository": {
     "type": "git",
@@ -28,8 +30,10 @@
   "homepage": "https://github.com/rahuldhole/idbsuit#readme",
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
-    "typescript": "^5.4.5",
+    "http-server": "^14.1.1",
     "tsup": "^8.0.2",
-    "jsdoc": "^4.0.3"
+    "typedoc": "^0.25.13",
+    "typedoc-material-theme": "^1.0.2",
+    "typescript": "^5.4.5"
   }
 }
