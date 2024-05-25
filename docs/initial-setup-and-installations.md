@@ -15,4 +15,6 @@ Youtube: https://www.youtube.com/watch?v=eh89VE3Mk5g
     for `pnpm run build`
 5. "lint": "tsc" add in package.json
     `pnpm run lint`
-6. Install JSDoc
+6. Install `Typedoc` and `typedoc-material-theme`
+7. Publish latest docs on github pages with domain docs.idbsuit.org
+8. Cloudflare or Netlify setup to publish docs from each release branch

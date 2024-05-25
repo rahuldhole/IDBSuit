@@ -1,4 +1,7 @@
 # IDBSuit
+ [![npm version](https://badge.fury.io/js/idbsuit.svg)](https://badge.fury.io/js/idbsuit) [![license](https://img.shields.io/npm/l/idbsuit.svg)](https://github.com/rahuldhole/IDBSuit/blob/main/LICENSE)
+ ![publish workflow](https://github.com/rahuldhole/idbsuit/actions/workflows/cd.yml/badge.svg)
+
 IndexedDB Suit for handling migrations automatically and provide ORM.
 
 Sample react project: https://github.com/rahuldhole/slick-pick
