@@ -1,0 +1,24 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "name": "iDBSuit",
+  // "cname": "sample-npm-package.js.org", // when custom domain used on Github pages
+  // "gaID": "Google-Analytics-ID",
+  "entryPoints": ["src/**/*.ts"],
+  "out": "docs.idbsuit.org",
+  "logLevel": "Verbose",
+  "exclude": ["**/*.test.ts"],
+  "readme": "README.md",
+  "includeVersion": true,
+  "hideGenerator": true,
+  "excludePrivate": true,
+  "excludeExternals": true,
+  "plugin": ["typedoc-material-theme"],
+  "themeColor": "#87CEEB",
+  "navigationLinks": {
+    "GitHub": "https://github.com/rahuldhole/idbsuit"
+  },
+  "sidebarLinks": {
+    "GitHub": "https://github.com/rahuldhole/idbsuit"
+  },
+  // "searchInComments": true
+}
