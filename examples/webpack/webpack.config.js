@@ -5,12 +5,12 @@ module.exports = {
     output: {
         filename: 'main.js',
         path: path.resolve(__dirname, 'dist'),
+        clean: true,
     },
     mode: 'development',
     devServer: {
-        static: {
-            directory: path.resolve(__dirname, 'dist'),
-        },
+        static: path.join(__dirname, 'public'),
+        compress: true,
         port: 3000,
         allowedHosts: 'all',
         open: true,

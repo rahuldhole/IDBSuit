@@ -1,4 +1,4 @@
-export const Schema = {
+const Schema = {
   dbName: "slickPickDB",
   version: 1714815400413,
   tables: [
@@ -36,3 +36,4 @@ export const Schema = {
     },
   ],
 };
+module.exports = Schema;
