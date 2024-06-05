@@ -1,17 +1,11 @@
 import IDBSuit from './config/IDBSuit.js'
 class App {
   constructor() {
-    this.message = 'Hello, ES6!';
+    this.db = IDBSuit();
   }
 
   displayDB() {
-    console.log(this.message);
-
-    const idbs = IDBSuit();
-
-    console.log(idbs);
-
-    idbs.openDatabase()
+    this.db.openDatabase()
       .then(dbInstance => {
         document.getElementById('root').innerText = 'DB Version '+dbInstance.version;
       })
@@ -19,7 +13,7 @@ class App {
         console.error('Error opening database:', error);
       });
 
-    // idbs.destroy()
+    // this.db.destroy()
     //   .then(() => {
     //     console.log('Database deleted successfully');
     //   })

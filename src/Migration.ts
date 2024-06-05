@@ -1,4 +1,4 @@
-export default class Migration {
+export default abstract class Migration {
   static derivedClasses: Array<[string, number]> = [];
 
   protected dbInstance: IDBDatabase;
@@ -8,6 +8,8 @@ export default class Migration {
   }
 
   static newVersion(version: number): void {
-    this.derivedClasses.push([this.name, version]); // record class name and version
+    this.derivedClasses.push([this.name, version]);
   }
+
+  abstract migrate(): void;
 }
