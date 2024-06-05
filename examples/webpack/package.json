@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "start": "webpack serve --open"
+    "start": "webpack serve --open",
+    "debug": "npm --node-options=--inspect=0.0.0.0:9229 run start"
   },
   "keywords": [
     "IDBSuit",
